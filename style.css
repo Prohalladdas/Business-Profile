@@ -698,7 +698,9 @@ section {
     width: 165px;
     color: white;
     background-color: #414a7d;
-    position: sticky;
+    position: fixed;
+    bottom: 12px;
+    right: 23px;
 }
 
 .chat-item {
@@ -736,64 +738,25 @@ section {
 
 }
 
-@media (max-width:300px) {
+@media (max-width:780px) {
+
+    header {
+       position: fixed;
+       /* position: sticky; */
+        top: 0px;
+        background-color: #f7f7f7;
+        z-index: 2;
+        height: 100px;
+        width: 100%;
+        box-shadow: inset 0px 11px 25px -26px gray;
+    }
     .name-logo {
         font-size: 4vw; /* 4% of the viewport width */
         margin-bottom: 2vw; /* 2% of the viewport width */
     }
-
-    /* .nav-content ul {}
-
-    .bar-ima img {}
-
-    .first-nav {}
-
-    .section-container {}
-
-    .social-logo {}
-
-    .imfromation {}
-
-    #logo {}
-
-    .introdaction {}
-
-    .box {}
-
-    .box-cont {}
-
-    .box p {}
-
-    .box-cont p {}
-
-    .client-content i {}
-
-    #logo-clients {}
-
-    .skill-container {}
-
-    .skill-item {}
-
-    .item1 {}
-
-    .expertise {}
-
-    .exp-content {}
-
-    .expertise-container {}
-
-    .line-contact-last {}
-
-    .head {}
-
-    .contact {}
-
-    .box2 {}
-
-    .line2 {} */
-}
-
-@media (min-width:301px) and (max-width:961px) {
+    .name-logo p{
+        font-size: 27px;
+    }
     .name-logo {
         font-size: 3vw; /* 3% of the viewport width */
         margin-bottom: 2vw; /* 2% of the viewport width */
@@ -1044,4 +1007,262 @@ section {
     .box2 p {
         display: none;
     }
+
+
+   
+
+}
+
+@media (min-width:780px) and (max-width:961px) {
+    .name-logo {
+        font-size: 3vw; /* 3% of the viewport width */
+        margin-bottom: 2vw; /* 2% of the viewport width */
+        margin-top: 5vh; /* 5% of the viewport height */
+    }
+
+    .nav-content ul {
+        display: none;
+    }
+
+    .bar-ima img {
+        display: block;
+        height: 43px;
+        width: 45px;
+
+    }
+
+    .first-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .section-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 30px;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 2s ease;
+        opacity: 1;
+    }
+
+    .social-logo {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ededed;
+        top: 1149px;
+        height: 440px;
+        width: 100%;
+    }
+
+    .imfromation {
+        height: 465px;
+        width: 380px;
+        background-color: #f0f0f0;
+        color: #001655;
+        color: rgb(0, 0, 0);
+        margin-bottom: 6px;
+
+        position: relative;
+        animation: moveLeft 3s forwards;
+
+        margin-left: 200px;
+        top: -7px;
+    }
+
+    #logo {
+        display: flex;
+        height: 45px;
+        width: 383px;
+        margin-top: -92px;
+        font-size: 20px;
+        align-items: normal;
+        justify-content: center;
+        background-color: #001655;
+
+        position: relative;
+        animation: Logoicon 4s forwards;
+    }
+
+    .introdaction {
+        height: 510px;
+        width: 380px;
+        font-size: 16px;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 175px;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 35px;
+        color: #001655;
+    }
+
+    .box-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+        width: 100%;
+        height: 175px;
+        margin-left: 0;
+        margin-top: -1px;
+        color: #001655;
+    }
+
+    .box p {
+        font-size: 10px;
+    }
+
+    .box-cont p {
+        font-size: 10px;
+    }
+
+    .client-content i {
+        font-size: 37px;
+        margin: 22px;
+    }
+
+    #logo-clients {
+        display: flex;
+        height: 153px;
+        width: 100%;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .skill-container {
+        height: 412px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .skill-item {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
+    }
+
+    .item1 {
+        height: 57px;
+        width: 370px;
+        display: flex;
+        margin: -5px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .expertise {
+        height: 710px;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .exp-content {
+        width: 285px;
+    }
+
+    .ex-content {
+        width: 100%;
+    }
+
+    .expertise-container {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 2rem;
+    }
+
+    .line-contact-last {
+        display: none;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-right: -47px;
+    }
+
+    .contact {
+        height: 990px;
+    }
+
+    .box2 {
+        display: none;
+    }
+
+    .line2 {
+        display: none;
+    }
+
+    .line3 {
+        display: none;
+    }
+
+    .box3 {
+        margin: 40px;
+        width: 210px;
+        margin-top: -40px;
+        margin-left: 2px
+    }
+
+    .details2 {
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-box2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: -33px;
+    }
+
+    .contact-box2 input {
+        width: auto;
+    }
+
+    .contact-box1 input {
+        width: auto;
+    }
+
+    .exprience2 {
+        margin-top: -1px;
+    }
+
+    .line-contact {
+        width: 100%;
+        margin-top: 55px;
+        margin-bottom: 20px;
+    }
+
+    .bar-ima {
+        display: inline;
+    }
+
+    .box2 p {
+        display: none;
+    }
+
 }
